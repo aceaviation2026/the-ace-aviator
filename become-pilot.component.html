@@ -1,0 +1,1600 @@
+
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="container text-center">
+    <div    class="badge-gold mb-3 mt-2"  data-aos="fade-down" >Career Roadmap</div>
+    <h1 class="display-hero" data-aos="fade-up">How to Become a<br><span class="gradient-text">Commercial Pilot</span></h1>
+    <p class="hero-sub mt-3" data-aos="fade-up" data-aos-delay="100">
+      A complete, step-by-step guide to getting your DGCA CPL in India — from eligibility to airline placement.
+    </p>
+    <div class="hero-meta mt-4" data-aos="fade-up" data-aos-delay="150">
+      <span class="meta-tag">⏱ 1–2 Years Journey</span>
+      <span class="meta-tag">📋 7 Clear Steps</span>
+      <span class="meta-tag">✈️ DGCA Preparation</span>
+    </div>
+  </div>
+
+  <!-- Scroll Down Indicator -->
+<div class="scroll-down"
+     (click)="scrollToContent()"
+     data-aos="fade-up"
+     data-aos-delay="300"
+     style="color: #c49440;">
+  <div class="arrow">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M6 9L12 15L18 9"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+    </svg>
+  </div>
+</div>
+</section>
+
+
+
+<!-- PROCESS OVERVIEW CARDS
+<section class="section-pad">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3" *ngFor="let c of processCards; let i = index"
+           data-aos="zoom-in" [attr.data-aos-delay]="i * 80">
+        <div class="process-card glass-card p-4 text-center">
+          <div class="process-icon mb-3" [style.--c]="c.color">{{ c.icon }}</div>
+          <h5>{{ c.title }}</h5>
+          <p>{{ c.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- INTERACTIVE TIMELINE -->
+<section id="timeline" class="section-pad timeline-section" style="padding-top: 100px;">
+  <div class="container">
+
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="badge-gold mb-3">Step-by-Step Roadmap</div>
+      <h2 class="section-title">
+        Your Pilot Journey <span class="gradient-text">Timeline</span>
+      </h2>
+      <div class="divider-gold divider-center mt-3"></div>
+    </div>
+
+    <div class="timeline-wrapper">
+
+      <!-- Left: Step Tabs -->
+      <div class="timeline-nav" data-aos="fade-right">
+
+        <div
+          class="timeline-tab"
+          *ngFor="let step of timelineSteps; let i = index"
+          [class.active]="activeStep === i"
+          (click)="changeStep(i)">
+
+          <div
+            class="tab-icon"
+            [style.background]="activeStep===i ? step.color+'22' : ''"
+            [style.border-color]="activeStep===i ? step.color+'66' : ''">
+
+            {{ step.icon }}
+
+          </div>
+
+          <div class="tab-info">
+            <div class="tab-number">
+              STEP {{ step.number }}
+            </div>
+
+            <div class="tab-title">
+              {{ step.title }}
+            </div>
+          </div>
+
+          <div class="tab-duration" *ngIf="activeStep === i">
+            {{ step.duration }}
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Right Detail Panel -->
+      <div #detailPanel class="timeline-detail glass-card" data-aos="fade-left">
+
+        <ng-container *ngFor="let step of timelineSteps; let i = index">
+
+          <div class="detail-content" *ngIf="activeStep === i">
+
+            <div class="detail-header">
+
+              <div
+                class="detail-icon"
+                [style.background]="step.color+'22'"
+                [style.border-color]="step.color+'44'">
+
+                {{ step.icon }}
+
+              </div>
+
+              <div>
+                <div class="detail-step-num">
+                  STEP {{ step.number }}
+                </div>
+<h3 #detailHeading class="detail-title">
+  {{ step.title }}
+</h3>
+
+                <span class="detail-duration">
+                  ⏱ {{ step.duration }}
+                </span>
+              </div>
+
+            </div>
+
+            <p class="detail-desc">
+              {{ step.desc }}
+            </p>
+
+            <div class="detail-checklist">
+
+              <div class="check-item" *ngFor="let d of step.details">
+
+                <svg width="16" height="16"
+                     fill="none"
+                     stroke="#FFB300"
+                     stroke-width="2"
+                     viewBox="0 0 24 24">
+
+                  <path d="M20 6L9 17l-5-5"/>
+
+                </svg>
+
+                <span>{{ d }}</span>
+
+              </div>
+
+            </div>
+
+            <div class="detail-progress">
+
+              <div class="progress-label">
+                Journey Progress
+              </div>
+
+              <div class="progress-track">
+
+                <div
+                  class="progress-fill"
+                  [style.width.%]="((i+1)/timelineSteps.length)*100"
+                  [style.background]="step.color">
+
+                </div>
+
+              </div>
+
+              <div class="progress-pct">
+                {{ ((i+1)/timelineSteps.length*100) | number:'1.0-0' }}%
+              </div>
+
+            </div>
+
+          </div>
+
+        </ng-container>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ELIGIBILITY CHECKER -->
+<section  id="eligibility"  id="eligibility"  class="section-pad eligibility-section">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+
+      <!-- Left Content -->
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="badge-gold mb-3">Eligibility Quiz</div>
+
+        <h2 class="section-title">
+          Are You <span class="gradient-text">Eligible?</span>
+        </h2>
+
+        <div class="divider-gold mt-3 mb-4"></div>
+
+        <p class="section-subtitle">
+          Answer quick questions to instantly check whether you qualify for
+          CPL training in India.
+        </p>
+
+        <!-- Eligibility Points -->
+        <div class="eligibility-points mt-4">
+          <div class="point-card">
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <h6>Science Students</h6>
+              <p>12th Pass with Physics & Mathematics preferred.</p>
+            </div>
+          </div>
+
+          <div class="point-card">
+            <i class="fas fa-user-graduate"></i>
+            <div>
+              <h6>Non-Science Students</h6>
+              <p>
+                Can still become pilots by completing Physics & Maths through
+                NIOS or equivalent.
+              </p>
+            </div>
+          </div>
+
+          <div class="point-card">
+            <i class="fas fa-ruler-vertical"></i>
+            <div>
+              <h6>Height Requirement</h6>
+              <p>
+                Recommended minimum height:
+                <strong>5 ft (152 cm)</strong>. Must comfortably reach aircraft
+                controls during medical assessment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quiz -->
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="quiz-card glass-card p-4 p-md-5">
+
+          <ng-container *ngIf="!quizResult">
+
+            <h5 class="quiz-title mb-4">Quick Eligibility Check</h5>
+
+            <!-- Age -->
+           <div class="quiz-field">
+  <label class="quiz-label">Your Age</label>
+
+  <div class="quiz-options">
+    <button
+      *ngFor="let opt of ageOptions"
+      class="quiz-opt"
+      [class.selected]="quiz.age === opt"
+      (click)="quiz.age = opt">
+
+      {{ opt }}
+    </button>
+  </div>
+
+  <small class="error-text" *ngIf="errors.age">
+    {{ errors.age }}
+  </small>
+</div>
+
+            <!-- Education -->
+            <div class="quiz-field">
+              <label class="quiz-label">Education Background</label>
+
+              <div class="quiz-options">
+                <button
+                  *ngFor="let opt of educationOptions"
+                  class="quiz-opt"
+                  [class.selected]="quiz.education === opt"
+                  (click)="quiz.education = opt">
+
+                  {{ opt }}
+                </button>
+              </div>
+              <small class="error-text" *ngIf="errors.education">
+  {{ errors.education }}
+</small>
+            </div>
+
+            <!-- Science / Non Science -->
+            <div class="quiz-field">
+              <label class="quiz-label">Academic Stream</label>
+
+              <div class="quiz-options">
+                <button
+                  *ngFor="let opt of streamOptions"
+                  class="quiz-opt"
+                  [class.selected]="quiz.stream === opt"
+                  (click)="quiz.stream = opt">
+
+                  {{ opt }}
+                </button>
+              </div>
+              <small class="error-text" *ngIf="errors.stream">
+  {{ errors.stream }}
+</small>
+            </div>
+
+            <!-- Height -->
+            <div class="quiz-field">
+              <label class="quiz-label">Your Height</label>
+
+              <div class="quiz-options">
+                <button
+                  *ngFor="let opt of heightOptions"
+                  class="quiz-opt"
+                  [class.selected]="quiz.height === opt"
+                  (click)="quiz.height = opt">
+
+                  {{ opt }}
+                </button>
+              </div>
+
+<small class="error-text" *ngIf="errors.height">
+  {{ errors.height }}
+</small>
+            </div>
+
+            <!-- Vision -->
+            <div class="quiz-field">
+              <label class="quiz-label">Vision</label>
+
+              <div class="quiz-options">
+                <button
+                  *ngFor="let opt of visionOptions"
+                  class="quiz-opt"
+                  [class.selected]="quiz.vision === opt"
+                  (click)="quiz.vision = opt">
+
+                  {{ opt }}
+                </button>
+              </div>
+              <small class="error-text" *ngIf="errors.vision">
+  {{ errors.vision }}
+</small>
+            </div>
+
+            <!-- Nationality -->
+            <div class="quiz-field">
+              <label class="quiz-label">Nationality</label>
+
+              <div class="quiz-options">
+                <button
+                  *ngFor="let opt of citizenshipOptions"
+                  class="quiz-opt"
+                  [class.selected]="quiz.citizenship === opt"
+                  (click)="quiz.citizenship = opt">
+
+                  {{ opt }}
+                </button>
+              </div>
+              <small class="error-text" *ngIf="errors.citizenship">
+  {{ errors.citizenship }}
+</small>
+            </div>
+
+            <!-- English -->
+            <div class="quiz-field mt-3">
+              <label class="quiz-label">English Proficiency</label>
+
+              <div class="quiz-options">
+                <button
+                  *ngFor="let opt of englishOptions"
+                  class="quiz-opt"
+                  [class.selected]="quiz.english === opt"
+                  (click)="quiz.english = opt">
+
+                  {{ opt }}
+                </button>
+              </div>
+
+<small class="error-text" *ngIf="errors.english">
+  {{ errors.english }}
+</small>
+            </div>
+
+         <button
+  type="button"
+  class="btn-gold w-100 mt-4"
+  (click)="checkEligibilit()">
+  Check My Eligibility →
+</button>
+
+          </ng-container>
+
+          <!-- Result -->
+    <!-- <button
+  type="button"
+  class="btn-gold w-100 mt-4"
+  (click)="checkEligibilit()">
+  Check My Eligibility →
+</button> -->
+
+<!-- Result -->
+<div *ngIf="quizResult"
+     id="quiz-result"
+     class="quiz-result">
+
+  <div class="result-icon" [class]="quizResult">
+    <span *ngIf="quizResult === 'eligible'">✅</span>
+    <span *ngIf="quizResult === 'partial'">⚠️</span>
+    <span *ngIf="quizResult === 'not-eligible'">❌</span>
+  </div>
+
+  <h4 *ngIf="quizResult === 'eligible'"
+      class="result-title text-success-custom">
+    You're Eligible! 🎉
+  </h4>
+
+  <h4 *ngIf="quizResult === 'partial'"
+      class="result-title text-warning-custom">
+    Partially Eligible
+  </h4>
+
+  <h4 *ngIf="quizResult === 'not-eligible'"
+      class="result-title text-danger-custom">
+    Not Yet Eligible
+  </h4>
+
+  <p class="result-desc">
+
+              <ng-container *ngIf="quizResult === 'eligible'">
+                Great news! Based on your inputs, you meet the basic eligibility
+                criteria for CPL training in India.
+              </ng-container>
+
+              <ng-container *ngIf="quizResult === 'partial'">
+                You meet some but not all criteria. You may need guidance in
+                academics or medical requirements.
+              </ng-container>
+
+              <ng-container *ngIf="quizResult === 'not-eligible'">
+                You currently may not meet DGCA eligibility requirements,
+                but alternative pathways are available.
+              </ng-container>
+
+            </p>
+
+  <div class="result-actions">
+    <a routerLink="/contact" fragment="consultation-form" class="btn-gold">
+      Book Free Consultation
+    </a>
+
+    <button class="btn-outline-sky"
+            (click)="resetQuiz()">
+      Try Again
+    </button>
+  </div>
+
+</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SALARY INFORMATION CAROUSEL SECTION -->
+    <section  id="pilot-salary"     id="cpl-guidance" class="section-pad salary-carousel-section">
+      <div id="pilot-salary"   class="container">
+
+        <!-- Heading -->
+        <div class="text-center mb-5" data-aos="fade-up">
+          <div class="badge-gold mb-3">Pilot Career Growth</div>
+
+          <h2 class="section-title">
+            Commercial Pilot <span class="gradient-text">Salary Structure</span>
+          </h2>
+
+          <div class="divider-gold divider-center mt-3"></div>
+
+          <p class="section-subtitle mx-auto mt-3">
+            Discover how pilot salaries grow from training stage to becoming an Airline Captain.
+          </p>
+        </div>
+
+        <!-- Salary Carousel -->
+        <div id="salaryCarousel" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="salary-carousel-card">
+
+                <div class="salary-left">
+
+                  <div class="salary-logo">
+                    ✈
+                  </div>
+
+                  <div class="salary-content">
+                      <span class="salary-stage">
+                        Entry Level Pilot
+                      </span>
+
+                    <h3 class="salary-role">
+                      Junior First Officer
+                    </h3>
+
+                    <p class="salary-description">
+                      Start your aviation career with domestic airlines after CPL training
+                      and airline selection programs.
+                    </p>
+
+                    <div class="salary-features">
+                      <span>DGCA CPL</span>
+                      <span>200 Flying Hours</span>
+                      <span>Airline Ready</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="salary-right">
+                  <div class="salary-price">
+                    ₹1.5L – ₹3L
+                  </div>
+
+                  <span class="salary-month">
+                    Per Month
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="salary-carousel-card">
+
+                <div class="salary-left">
+
+                  <div class="salary-logo">
+                    🛫
+                  </div>
+
+                  <div class="salary-content">
+                    <span class="salary-stage">
+                      Mid Career Pilot
+                    </span>
+
+                    <h3 id=" First-Officer" class="salary-role">
+                      
+                     Senior First Officer                      
+                    </h3>
+
+                    <p class="salary-description">
+                      Pilots with higher flight hours and aircraft type rating earn
+                      significantly higher salaries and international exposure.
+                    </p>
+
+                    <div class="salary-features">
+                      <span>200 Hours</span>
+                      <span>Type Rated</span>
+                      <span>International Flights</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="salary-right">
+                  <div class="salary-price">
+                    ₹2.5L – ₹5L
+                  </div>
+
+                  <span class="salary-month">
+                    Per Month
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="salary-carousel-card">
+
+                <div class="salary-left">
+
+                  <div class="salary-logo">
+                    👨‍✈️
+                  </div>
+
+                  <div class="salary-content">
+                    <span class="salary-stage">
+                      Advanced Level
+                    </span>
+
+                    <h3 id="Captain" class="salary-role">
+                      Captain  
+                    </h3>
+
+                    <p class="salary-description">
+                      Captains command premium salaries, leadership roles, and global
+                      airline opportunities with extensive flying experience.
+                    </p>
+
+                    <div class="salary-features">
+                      <span>Airline Captain</span>
+                      <span>Leadership Role</span>
+                      <span>Global Routes</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="salary-right">
+                  <div class="salary-price">
+                   ₹6L – ₹8L
+                  </div>
+
+                  <span class="salary-month">
+                    Per Month
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="salary-carousel-card">
+
+                <div class="salary-left">
+
+                  <div class="salary-logo">
+                    🛫
+                  </div>
+
+                  <div class="salary-content">
+                    <span class="salary-stage">
+                      Mid Career Pilot
+                    </span>
+
+                    <h3 id="senior-commander" class="salary-role">
+                     Senior Commander
+                    </h3>
+
+                    <p class="salary-description">
+                      Pilots with higher flight hours and aircraft type rating earn
+                      significantly higher salaries and international exposure.
+                    </p>
+
+                    <div class="salary-features">
+                      <span>500+ Hours</span>
+                      <span>Type Rated</span>
+                      <span>International Flights</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="salary-right">
+                  <div class="salary-price">
+                    ₹8L – ₹15L
+                  </div>
+
+                  <span class="salary-month">
+                    Per Month
+                  </span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- Controls -->
+          <button  class="carousel-control-prev" type="button" data-bs-target="#salaryCarousel" data-bs-slide="prev">
+            <span class="custom-arrow">
+              ‹
+            </span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#salaryCarousel" data-bs-slide="next">
+            <span class="custom-arrow">
+              ›
+            </span>
+          </button>
+
+          <div class="carousel-indicators">
+  <button type="button" data-bs-target="#salaryCarousel" data-bs-slide-to="0" class="active"></button>
+  <button type="button" data-bs-target="#salaryCarousel" data-bs-slide-to="1"></button>
+  <button type="button" data-bs-target="#salaryCarousel" data-bs-slide-to="2"></button>
+  <button type="button" data-bs-target="#salaryCarousel" data-bs-slide-to="3"></button>
+</div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+  <!-- COST CALCULATOR -->
+  <section  id="cpl-calculator" class="section-pad cost-calc-section">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="badge-gold mb-3">Cost Estimator</div>
+        <h2 class="section-title">CPL Training <span class="gradient-text">Cost Calculator</span></h2>
+        <div class="divider-gold divider-center mt-3"></div>
+        <p class="section-subtitle mx-auto mt-3">
+          Get a realistic estimate of your total pilot training investment based on country and school tier.
+        </p>
+      </div>
+
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="calc-form glass-card p-4 p-md-5">
+            <div class="calc-field">
+              <label class="calc-label">Training Country</label>
+              <div class="calc-options">
+                <button *ngFor="let c of ['india','usa','canada']"
+                        class="calc-opt" [class.active]="costInputs.country === c"
+                        (click)="costInputs.country = c">
+                  <span *ngIf="c==='india'">🇮🇳 India</span>
+                  <span *ngIf="c==='usa'">🇺🇸 USA</span>
+                  <span *ngIf="c==='canada'">🇨🇦 Canada</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="calc-field">
+              <label class="calc-label">School Tier</label>
+              <div class="calc-options">
+                <button *ngFor="let s of [{v:'low',l:'Budget'},{v:'mid',l:'Mid-Range'},{v:'high',l:'Premium'}]"
+                        class="calc-opt" [class.active]="costInputs.school === s.v"
+                        (click)="costInputs.school = s.v">
+                  {{ s.l }}
+                </button>
+              </div>
+            </div>
+
+            <div class="calc-toggle">
+              <label class="toggle-label">
+                <input type="checkbox" [(ngModel)]="costInputs.simulator"> Include Sim Hours (Extra ₹3L)
+              </label>
+            </div>
+
+ 
+            
+
+            
+            <button class="btn-gold w-100 mt-4" (click)="calculateCost()">
+              Calculate Cost →
+            </button>
+          </div>
+
+<!-- 
+          <button class="btn-gold w-100 mt-3"
+        (click)="calculateEMI()">
+  Compare Bank EMI →  
+</button>  -->
+
+          
+        </div>
+
+
+
+        
+
+        <div class="col-lg-6" data-aos="fade-left"   id="cost-result-section"
+  class="col-lg-6"
+  data-aos="fade-left" >
+          <div class="cost-result" *ngIf="estimatedCost.low > 0">
+            <div class="cost-badge badge-gold mb-3">Estimated Investment</div>
+            <div class="cost-range">
+              <div class="cost-value">{{ formatCost(estimatedCost.low) }}</div>
+              <div class="cost-to">to</div>
+              <div class="cost-value">{{ formatCost(estimatedCost.high) }}</div>
+            </div>
+            <div class="cost-breakdown glass-card p-4 mt-4">
+              <h6 class="mb-3">What's Included</h6>
+              <div class="breakdown-item" *ngFor="let item of [
+                {label: 'Ground School + Exams', pct: 15},
+                {label: 'Flight Training (200 hrs)', pct: 70},
+                {label: 'Medical & Documentation', pct: 5},
+                {label: 'Living & Misc Expenses', pct: 10}
+              ]">
+                <div class="breakdown-row">
+                  <span>{{ item.label }}</span>
+                  <span class="pct">{{ item.pct }}%</span>
+                </div>
+                <div class="breakdown-bar"><div [style.width.%]="item.pct"></div></div>
+              </div>
+            </div>
+            <div class="emi-bank-result glass-card p-4 mt-4"
+     *ngIf="showLoanResult">
+
+  <h5 class="mb-4">
+    Estimated EMI Options
+  </h5>
+
+  <div class="bank-emi-item"
+       *ngFor="let bank of emiResult">
+
+    <div class="bank-head">
+
+      <strong>
+        {{ bank.name }}
+      </strong>
+
+      <span>
+        {{ bank.rate }}%
+      </span>
+
+    </div>
+
+    <div class="bank-emi-price">
+
+      ₹ {{ bank.emi | number:'1.0-0' }}/month
+
+    </div>
+
+  </div>
+
+</div>
+            <p class="cost-note mt-3">
+              * Estimates may vary. Book a free consultation for a detailed financial plan.
+            </p>
+          </div>
+          <div class="cost-placeholder text-center" *ngIf="estimatedCost.low === 0" data-aos="fade-in">
+            <div class="placeholder-icon">💰</div>
+            <p>Configure your preferences and click Calculate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================
+     AVIATION FINANCE & LOAN HUB
+===================================== -->
+
+<section  id="aviation-loan" class="finance-hub section-pad">
+
+  <div class="container">
+
+    <!-- SECTION HEADER -->
+    <div class="text-center mb-5">
+
+      <div class="badge-gold mb-3">
+        Aviation Finance
+      </div>
+
+      <h2 class="section-title">
+        Aviation <span class="gradient-text">Finance & Loan Hub</span>
+      </h2>
+
+      <div class="divider-gold mx-auto mt-3 mb-4"></div>
+
+      <p class="section-subtitle finance-subtitle">
+        Compare aviation education loans, calculate EMI instantly,
+        understand TCS rules, and explore scholarships for CPL training.
+      </p>
+
+    </div>
+
+    <!-- =====================================
+         BANK CARDS
+    ===================================== -->
+<!-- =====================================
+     AVIATION LOAN COMPARISON CARDS
+===================================== -->
+<!-- =====================================
+     AVIATION LOAN COMPARISON
+===================================== -->
+
+<div class="loan-comparison-wrapper">
+
+  <!-- SBI -->
+  <div class="loan-strip">
+
+    <div class="loan-bank">
+
+      <div class="loan-icon">
+        SBI
+      </div>
+
+      <div class="loan-bank-info">
+
+        <h4>
+          State Bank of India
+        </h4>
+
+        <p>
+          Government Education Loan
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="loan-details">
+
+      <div class="loan-detail-box">
+        <span>Interest</span>
+        <strong>8.15% – 10.25%</strong>
+      </div>
+
+      <div class="loan-detail-box">
+        <span>Collateral</span>
+        <strong>Above ₹7.5L</strong>
+      </div>
+
+      <div class="loan-detail-box">
+        <span>Loan Amount</span>
+        <strong>Up to ₹1.5 Cr</strong>
+      </div>
+
+      <div class="loan-detail-box">
+        <span>EMI Example</span>
+        <strong>₹1.28L/month</strong>
+      </div>
+
+    </div>
+
+    <div class="loan-action">
+
+      <!-- <button class="loan-btn"
+              (click)="selectBank('SBI')">
+
+        Apply Now
+
+      </button> -->
+
+    </div>
+
+  </div>
+
+  <!-- BOB -->
+  <div class="loan-strip">
+
+    <div class="loan-bank">
+
+      <div class="loan-icon">
+        BOB
+      </div>
+
+      <div class="loan-bank-info">
+
+        <h4>
+          Bank of Baroda
+        </h4>
+
+        <p>
+          Public Sector Loan
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="loan-details">
+
+      <div class="loan-detail-box">
+        <span>Interest</span>
+        <strong>8.40% – 10.50%</strong>
+      </div>
+
+      <div class="loan-detail-box">
+        <span>Collateral</span>
+        <strong>Property / FD</strong>
+      </div>
+
+      <div class="loan-detail-box">
+        <span>Loan Amount</span>
+        <strong>Up to ₹1 Cr</strong>
+      </div>
+
+      <div class="loan-detail-box">
+        <span>EMI Example</span>
+        <strong>₹1.30L/month</strong>
+      </div>
+
+    </div>
+
+    <div class="loan-action">
+
+      <!-- <button class="loan-btn"
+              (click)="selectBank('Bank of Baroda')">
+
+        Apply Now
+
+      </button> -->
+
+    </div>
+
+  </div>
+
+  <!-- HDFC -->
+  <div class="loan-strip">
+
+    <div class="loan-bank">
+
+      <div class="loan-icon">
+        HDFC
+      </div>
+
+      <div class="loan-bank-info">
+
+        <h4>
+          HDFC Credila
+        </h4>
+
+        <p>
+          Private Aviation Loan
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="loan-details">
+
+      <div class="loan-detail-box">
+        <span>Interest</span>
+        <strong>9.20% – 11.50%</strong>
+      </div>
+
+      <div class="loan-detail-box">
+        <span>Collateral</span>
+        <strong>Flexible Options</strong>
+      </div>
+
+      <div class="loan-detail-box">
+        <span>Loan Amount</span>
+        <strong>Up to ₹1.5 Cr</strong>
+      </div>
+
+      <div class="loan-detail-box">
+        <span>EMI Example</span>
+        <strong>₹1.35L/month</strong>
+      </div>
+
+    </div>
+
+    <div class="loan-action">
+
+      <!-- <button class="loan-btn"
+              (click)="selectBank('HDFC Credila')">
+
+        Apply Now
+
+      </button> -->
+
+    </div>
+
+  </div>
+
+  <!-- ICICI -->
+  <div class="loan-strip">
+
+    <div class="loan-bank">
+
+      <div class="loan-icon">
+        ICICI
+      </div>
+
+      <div class="loan-bank-info">
+
+        <h4>
+          ICICI Bank
+        </h4>
+
+        <p>
+          Professional Education Loan
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="loan-details">
+
+      <div class="loan-detail-box">
+        <span>Interest</span>
+        <strong>9.50% – 11.25%</strong>
+      </div>
+
+      <div class="loan-detail-box">
+        <span>Collateral</span>
+        <strong>Usually Required</strong>
+      </div>
+
+      <div class="loan-detail-box">
+        <span>Loan Amount</span>
+        <strong>Up to ₹1 Cr</strong>
+      </div>
+
+      <div class="loan-detail-box">
+        <span>EMI Example</span>
+        <strong>₹1.34L/month</strong>
+      </div>
+
+    </div>
+
+    <div class="loan-action">
+
+      <!-- <button class="loan-btn"
+              (click)="selectBank('ICICI Bank')">
+
+        Apply Now
+
+      </button> -->
+
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- =====================================
+         EMI CALCULATOR
+    ===================================== -->
+<!-- =====================================
+     NEW EMI CALCULATOR LAYOUT
+===================================== -->
+
+<div id="emi-calculator"  class="loan-calculator-box mt-5">
+
+  <div class="emi-layout-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="emi-left-panel">
+
+      <div class="badge-gold-custom">
+        EMI Calculator
+      </div>
+
+      <h2  id="Calculate" class="emi-main-heading">
+        Calculate Your Aviation Loan EMI
+      </h2>
+
+      <p class="emi-main-desc">
+        Estimate your monthly EMI for CPL training loans with accurate repayment calculations.
+      </p>
+
+      <!-- FORM BOX -->
+      <div class="emi-form-box">
+
+        <!-- Loan Amount -->
+        <div class="emi-input-group">
+
+          <label>
+            Loan Amount (₹)
+          </label>
+
+          <div class="emi-input-wrap">
+
+            <span class="emi-input-icon">
+              ₹
+            </span>
+
+            <input type="number"
+                   [(ngModel)]="loanAmount"
+                   class="emi-modern-input"
+                   placeholder="Enter loan amount">
+
+          </div>
+
+        </div>
+
+        <!-- Interest -->
+        <div class="emi-input-group">
+
+          <label>
+            Interest Rate (%)
+          </label>
+
+          <div class="emi-input-wrap">
+
+            <span class="emi-input-icon">
+              %
+            </span>
+
+            <input type="number"
+                   [(ngModel)]="interestRate"
+                   class="emi-modern-input"
+                   placeholder="Enter interest rate">
+
+          </div>
+
+        </div>
+
+        <!-- Years -->
+        <div class="emi-input-group">
+
+          <label>
+            Loan Tenure (Years)
+          </label>
+
+          <div class="emi-input-wrap">
+
+            <span class="emi-input-icon">
+              Y
+            </span>
+
+            <input type="number"
+                   [(ngModel)]="loanYears"
+                   class="emi-modern-input"
+                   placeholder="Enter tenure">
+
+          </div>
+
+        </div>
+
+        <!-- BUTTON -->
+        <button class="emi-calculate-btn"
+                (click)="calculateEMI()">
+
+          Calculate EMI
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="emi-right-panel">
+
+      <div class="emi-summary-card">
+
+        <div class="summary-top">
+
+          <div class="summary-icon">
+            ₹
+          </div>
+
+          <h3>
+            EMI Summary
+          </h3>
+
+        </div>
+
+        <!-- EMI -->
+        <div class="summary-item">
+
+          <div>
+            <span>
+              Monthly EMI
+            </span>
+          </div>
+
+          <strong>
+            ₹ {{ monthlyEMI | number:'1.0-0' }}
+          </strong>
+
+        </div>
+
+        <!-- Interest -->
+        <div class="summary-item">
+
+          <div>
+            <span>
+              Total Interest
+            </span>
+          </div>
+
+          <strong>
+            ₹ {{ totalInterest | number:'1.0-0' }}
+          </strong>
+
+        </div>
+
+        <!-- Total -->
+        <div class="summary-item">
+
+          <div>
+            <span>
+              Total Amount
+            </span>
+          </div>
+
+          <strong>
+            ₹ {{ totalAmount | number:'1.0-0' }}
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- =====================================
+         TCS SECTION
+    ===================================== -->
+
+  
+
+    <!-- =====================================
+         SCHOLARSHIP SECTION
+    ===================================== -->
+<!-- =====================================
+     SCHOLARSHIP SECTION
+===================================== -->
+
+<!-- =========================================
+     SCHOLARSHIPS & AVIATION GRANTS
+========================================= -->
+
+<section  id="scholarships"  class="aviation-support-section">
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="support-heading text-center">
+      <span class="support-badge">FINANCIAL SUPPORT</span>
+
+      <h2>Scholarships & Aviation Grants</h2>
+
+      <p>
+        Explore scholarships, government support schemes,
+        and aviation grants that can help reduce the cost
+        of pilot training.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="support-timeline">
+
+      <!-- Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">🎓</div>
+
+        <div class="timeline-content">
+
+          <span class="timeline-tag">
+            MERIT SCHOLARSHIP
+          </span>
+
+          <h3  id="jrd">JRD Tata Scholarship</h3>
+
+          <p>
+            Supports deserving aviation students pursuing
+            CPL training and advanced aviation education.
+          </p>
+
+          <div class="timeline-details">
+            <div>
+              <strong>Benefits</strong>
+              <ul>
+                <li>Merit-based selection</li>
+                <li>Reduces training expenses</li>
+                <li>Supports aviation careers</li>
+              </ul>
+            </div>
+
+            <div>
+              <strong>Eligibility</strong>
+              <p>
+                Students with excellent academic performance
+                and strong aviation aspirations.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">🏛️</div>
+
+        <div class="timeline-content">
+
+          <span class="timeline-tag navy">
+            GOVERNMENT SUPPORT
+          </span>
+
+          <h3 id="gs" >Government Schemes</h3>
+
+          <p>
+            Central and state government schemes may provide
+            financial assistance for education and training.
+          </p>
+
+          <div class="timeline-details">
+            <div>
+              <strong>Benefits</strong>
+              <ul>
+                <li>Fee subsidies</li>
+                <li>Education assistance</li>
+                <li>State-level support</li>
+              </ul>
+            </div>
+
+            <div>
+              <strong>Eligibility</strong>
+              <p>
+                Students meeting state or central government
+                criteria.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">✈️</div>
+
+        <div class="timeline-content">
+
+          <span class="timeline-tag">
+            AVIATION GRANTS
+          </span>
+
+          <h3 id="sag">State Aviation Grants</h3>
+
+          <p>
+            Several states and aviation organizations offer
+            grants specifically for pilot training programs.
+          </p>
+
+          <div class="timeline-details">
+            <div>
+              <strong>Benefits</strong>
+              <ul>
+                <li>Pilot training assistance</li>
+                <li>State funding opportunities</li>
+                <li>CPL support programs</li>
+              </ul>
+            </div>
+
+            <div>
+              <strong>Eligibility</strong>
+              <p>
+                Students enrolled in approved aviation
+                institutions and training academies.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Note -->
+    <div class="support-note">
+      <strong>Important:</strong>
+      Scholarship criteria, grant amounts and application
+      processes vary. Always verify details from official
+      sources before applying.
+    </div>
+
+  </div>
+
+</section>
+
+  </div>
+
+</section>
+
+  
+  
+
+
+
+
+<!-- WHY CHOOSE OUR ACADEMY -->
+<section class="section-pad why-academy-section">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="badge-gold mb-3">Why Choose Us</div>
+
+      <h2 class="section-title">
+        Why Choose <span class="gradient-text">Our Academy</span>
+      </h2>
+
+      <div class="divider-gold divider-center mt-3"></div>
+
+      <p class="section-subtitle mx-auto mt-3">
+        We guide aspiring pilots through every stage of their aviation journey —
+        from DGCA preparation to airline career support.
+      </p>
+    </div>
+
+    <!-- Rounded Cards -->
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up">
+        <div class="academy-card">
+
+          <div class="academy-icon">
+            ✈
+          </div>
+
+          <h4 id="Expert" class="academy-title">
+            DGCA Expert Guidance
+          </h4>
+
+          <p class="academy-text">
+            Get complete mentorship for DGCA exams, medicals,
+            documentation, and pilot career planning.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="academy-card">
+
+          <div class="academy-icon">
+            🎯
+          </div>
+
+          <h4 id="Personalized" class="academy-title">
+            Personalized Roadmap
+          </h4>
+
+          <p class="academy-text">
+            Receive a step-by-step aviation roadmap tailored
+            to your education, budget, and career goals.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="academy-card">
+
+          <div class="academy-icon">
+            🛫
+          </div>
+
+          <h4 id="careersprt" class="academy-title">
+            Airline Career Support
+          </h4>
+
+          <p class="academy-text">
+            From interview preparation to airline guidance,
+            we help students become industry-ready pilots.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="academy-card">
+
+          <div class="academy-icon">
+            🌍
+          </div>
+
+          <h4 id="Abroad" class="academy-title">
+            India & Abroad Options
+          </h4>
+
+          <p class="academy-text">
+            Explore CPL training opportunities in India,
+            USA, Canada, and other global aviation hubs.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+

@@ -1,0 +1,614 @@
+<!-- BLOG & NEWS PAGE -->
+
+<section class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="container text-center">
+    <div class="badge-gold mb-3" data-aos="fade-down">Aviation Knowledge Hub</div>
+    <h1 class="display-hero" data-aos="fade-up">Blog & <span class="gradient-text">aviation News </span></h1>
+    <p class="hero-sub mt-3" data-aos="fade-up" data-aos-delay="100">
+      Stay updated with the latest aviation news, pilot career insights, DGCA updates, and real student success stories.
+    </p>
+  </div>
+</section>
+
+
+<section  id="news"  class="blog-categories-section section-pad">
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div style="margin-top: 80px;" class="badge-gold">
+                Aviation Knowledge Hub
+            </div>
+
+            <h2 class="section-title mt-3">
+                Explore by <span class="gradient-text">Category</span>
+            </h2>
+
+           <p class="section-subtitle text-center">
+    Browse aviation articles by topic and quickly find the information most relevant to your pilot journey.
+</p>
+
+        </div>
+
+        <div id="dgca-updates" class="categories-grid">
+
+            <a href="#" class="category-card">
+                <div class="category-icon">📘</div>
+                <h3>DGCA Updates</h3>
+                <p>Official regulations, exams and licensing updates.</p>
+            </a>
+
+            <a href="#" class="category-card">
+                <div class="category-icon">✈️</div>
+                <h3>Cadet Programs</h3>
+                <p>Airline cadet pathways and selection guidance.</p>
+            </a>
+
+            <a href="#" class="category-card">
+                <div class="category-icon">🌍</div>
+                <h3>Pilot Training Abroad</h3>
+                <p>International CPL training and DGCA conversion.</p>
+            </a>
+
+            <a href="#" class="category-card">
+                <div class="category-icon">🩺</div>
+                <h3>Medicals</h3>
+                <p>Class 1, Class 2 and medical certification guides.</p>
+            </a>
+
+            <a href="#" class="category-card">
+                <div class="category-icon">🛫</div>
+                <h3>Airline Hiring</h3>
+                <p>Recruitment trends and pilot opportunities.</p>
+            </a>
+
+            <a href="#" class="category-card">
+                <div class="category-icon">🎓</div>
+                <h3>Scholarships</h3>
+                <p>Financial support and aviation funding options.</p>
+            </a>
+
+            <a href="#" class="category-card">
+                <div class="category-icon">⚙️</div>
+                <h3>Aviation Tech</h3>
+                <p>Avionics, simulators and future aviation technology.</p>
+            </a>
+
+            <a href="#" class="category-card">
+                <div class="category-icon">📈</div>
+                <h3>Career Guidance</h3>
+                <p>Career roadmap, salary and airline preparation.</p>
+            </a>
+
+             
+            <div class="category-card">
+
+    <div class="category-icon">📘</div>
+
+    <h3>
+        <a href="#">DGCA Updates</a>
+    </h3>
+
+    <p>Official regulations, exams and licensing updates.</p>
+
+</div>
+        </div>
+
+    </div>
+
+      
+</section>  
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Featured Article Hero -->
+<section id="Latest-Articles"  class="section-pad">
+    
+  <div class="container">
+    <div class="featured-article glass-card" data-aos="fade-up">
+            <!-- <div class="featured-badge badge-gold">🔥 Featured Article</div> -->
+
+      <div class="featured-content">
+        <div class="featured-meta">
+            
+          <span class="art-category">{{ featuredArticle.category }}</span>
+          <span class="art-date">{{ featuredArticle.date }}</span>
+          <span class="art-read">{{ featuredArticle.readTime }}</span>
+        </div>
+        <h2 class="featured-title">{{ featuredArticle.title }}</h2>
+        <p class="featured-excerpt">{{ featuredArticle.excerpt }}</p>
+        <div class="featured-footer">
+          <div class="author-info">
+            <div class="author-avatar-sm">{{ featuredArticle.author.charAt(0) }}</div>
+            <span>{{ featuredArticle.author }}</span>
+          </div>
+          <button class="btn-gold">Read Full Article →</button>
+        </div>
+      </div>
+      <div class="featured-visual">
+        <div class="featured-emoji">✈️</div>
+        <div class="featured-stat">
+          <div class="f-stat-val">600+</div>
+          <div class="f-stat-label">New Pilot Slots</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Cards Grid -->
+<section id="airline-hiring"  class="section-pad" style="background: var(--color-navy-mid)">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="badge-gold mb-3">Latest Articles</div>
+      <h2 class="section-title">Aviation <span class="gradient-text">Insights</span></h2>
+      <div class="divider-gold divider-center mt-3"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let b of blogCards; let i = index"
+           data-aos="fade-up" [attr.data-aos-delay]="i*80">
+        <div class="blog-card glass-card">
+          <div class="blog-emoji">{{ b.emoji }}</div>
+          <div class="blog-body p-4">
+            <div class="blog-meta">
+              <span class="blog-cat">{{ b.category }}</span>
+              <span class="blog-date">{{ b.date }}</span>
+            </div>
+            <h5 class="blog-title">{{ b.title }}</h5>
+            <p class="blog-excerpt">{{ b.excerpt }}</p>
+            <div class="blog-footer">
+              <span class="blog-read">⏱ {{ b.readTime }}</span>
+              <button class="read-more-btn">Read More →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- <section class="section-pad">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+        
+
+        <div class="col-lg-7" data-aos="fade-right">
+
+            <div class="badge-gold mb-3">
+            
+            </div>
+
+            <h2 class="section-title mb-4">
+            Aviation
+            <span class="gradient-text">
+                Updates
+            </span>
+            </h2>
+
+            <div class="news-list">
+
+            <div
+                class="news-item glass-card"
+                *ngFor="let n of newsItems; let i = index"
+                data-aos="fade-up"
+                [attr.data-aos-delay]="i*60">
+
+                <span class="news-icon">
+                {{ n.icon }}
+                </span>
+
+                <div class="news-body">
+
+                <h6>
+                    {{ n.title }}
+                </h6>
+
+                <div class="news-meta">
+
+                    <span class="news-date">
+                    {{ n.date }}
+                    </span>
+
+                    <span class="news-tag">
+                    {{ n.tag }}
+                    </span>
+
+                </div>
+
+                </div>
+
+            </div>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="col-lg-5" data-aos="fade-left">
+
+            <div class="badge-gold mb-3">
+            Industry Watch
+            </div>
+
+            <h2 class="section-title mb-4">
+            Aviation
+            <span class="gradient-text">
+                Industry
+            </span>
+            </h2>
+
+            <div class="stories-list">
+
+            <div
+                class="story-card glass-card p-4"
+                *ngFor="let item of industryUpdates">
+
+                <div class="story-header">
+
+                <div class="story-avatar">
+                    {{ item.icon }}
+                </div>
+
+                <div>
+
+                    <div class="story-name">
+                    {{ item.title }}
+                    </div>
+
+                    <div class="story-city">
+                    {{ item.source }}
+                    </div>
+
+                </div>
+
+                </div>
+
+                <p class="story-text">
+                {{ item.description }}
+                </p>
+
+            </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </div>
+
+    </section> -->
+
+<!-- YouTube Videos -->
+    <!-- <section class="section-pad" style="background: var(--color-navy-mid)">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+        <div class="badge-gold mb-3">Watch & Learn</div>
+        <h2 class="section-title">Aviation <span class="gradient-text">Videos</span></h2>
+        <div class="divider-gold divider-center mt-3"></div>
+        </div>
+        <div class="row g-4">
+        <div class="col-md-6 col-lg-4" *ngFor="let v of youtubeVideos; let i = index"
+            data-aos="zoom-in" [attr.data-aos-delay]="i*100">
+            <div class="video-card glass-card">
+            <div class="video-thumb">
+                
+                <img [src]="'https://www.youtube.com/@Aviator_vinay' + v.id + '/hqdefault.jpg'"
+                    [alt]="v.title" loading="lazy">
+                <div class="video-overlay">
+                <div class="play-btn">
+                    <svg width="28" height="28" fill="white" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </div>
+                <span class="video-duration">{{ v.duration }}</span>
+                </div>
+            </div>
+            <div class="video-info p-3">
+                <h6>{{ v.title }}</h6>
+            </div>
+            </div>
+        </div>
+        </div>
+
+     
+        <div class="recruitment-banner mt-5" data-aos="fade-up">
+        <div class="rec-icon">📢</div>
+        <div class="rec-content">
+            <h5>Latest Airline Recruitment Updates</h5>
+            <p>IndiGo, Air India, and Akasa Air currently hiring First Officers — Minimum 200 hrs TT required</p>
+        </div>
+        <a routerLink="/contact" class="btn-gold">Get Notified</a>
+        </div>
+    </div>
+    </section> -->
+
+
+    <section id="aviation-videos" class="section-pad" style="background: var(--color-navy-mid)">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <div class="badge-gold mb-3">Watch & Learn</div>
+      <h2 class="section-title">
+        Aviation <span class="gradient-text">Videos</span>
+      </h2>
+      <div class="divider-gold divider-center mt-3"></div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Video 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="video-card glass-card">
+          <iframe width="342" height="607" src="https://www.youtube.com/embed/SSmtwK5pYh4" title="Explore Jeddah with @Aviator_vinay !" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+          <div class="video-info p-3">
+            <h6>A Day in the Life of an Indian Commercial Pilot</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="video-card glass-card">
+        <iframe width="342" height="607" src="https://www.youtube.com/embed/si1v4c1Nps4" title="From collecting facts to taking decisions — every step in FORDEC matters. Today, it’s time for R &amp; D" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+          <div class="video-info p-3">
+            <h6>DGCA CPL Theory — Air Navigation Explained</h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="video-card glass-card">
+         <iframe width="342" height="607" src="https://www.youtube.com/embed/WeTvq_RcwU0" title="Air India Pilot Layover in Bangkok | BOM to BKK Flight Vlog 🇮🇳✈️🇹🇭" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+          <div class="video-info p-3">
+            <h6>Flight School in India — Full Tour & Review</h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="airline-recruitment"   Career Opportunities class="section-pad aviation-jobs-section">
+
+    <div id="airline-recruitment" class="container">
+
+        <div  id="carear-op" class="text-center mb-5">
+
+            <div  id="career-counseling" class="badge-gold">    
+                Career Opportunities
+            </div>
+
+            <h2 class="section-title mt-3">
+                Current Airline
+                <span class="gradient-text">
+                    Hiring & Recruitment
+                </span>
+            </h2>
+
+            <p class="section-subtitle">
+                Explore airline hiring updates, cadet pilot programs,
+                and aviation career opportunities.
+            </p>
+
+        </div>
+
+        <div id="IndiGo-Airlines" class="row g-4">
+
+            <!-- IndiGo -->
+
+            <div  class="col-lg-4 col-md-6">
+
+                <div class="job-card">
+
+                    <div class="job-logo">
+                        <img src="assets/images/indigo.avif"
+                             alt="IndiGo">
+                    </div>
+
+                    <h3>IndiGo Airlines</h3>
+
+                    <div class="job-position">
+                        Cadet Pilot Program
+                    </div>
+
+                    <ul>
+                        <li>10+2 with Physics & Maths</li>
+                        <li>Class 1 Medical Required</li>
+                        <li>DGCA Eligibility Criteria</li>
+                    </ul>
+
+                    <div class="job-date">
+                        Last Updated: May 2026
+                    </div>
+
+                    <a 
+                       class="btn btn-gold w-100">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Air India -->
+
+            <div id="Air-India" class="col-lg-4 col-md-6">
+
+                <div class="job-card">
+
+                    <div class="job-logo">
+                        <img src="assets/images/Air_India-Logo.wine.svg"
+                             alt="Air India">
+                    </div>
+
+                    <h3>Air India</h3>
+
+                    <div class="job-position">
+                        Cadet Pilot Program
+                    </div>
+
+                    <ul>
+                        <li>60% in Physics & Maths</li>
+                        <li>Age 18–30 Years</li>
+                        <li>Class 1 Medical</li>
+                    </ul>
+
+                    <div class="job-date">
+                        Last Updated: May 2026
+                    </div>
+
+                    <a 
+                       class="btn btn-gold w-100">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Akasa Air -->
+
+            <div id="Akasa-Air" class="col-lg-4 col-md-6">
+
+                <div class="job-card">
+
+                    <div class="job-logo">
+                        <img src="assets/images/akasa-air-logo.webp"
+                             alt="Akasa Air">
+                    </div>
+
+                    <h3>Akasa Air</h3>
+
+                    <div class="job-position">
+                        First Officer Recruitment
+                    </div>
+
+                    <ul>
+                        <li>CPL with Valid Ratings</li>
+                        <li>DGCA Documentation</li>
+                        <li>Interview Process</li>
+                    </ul>
+
+                    <div class="job-date">
+                        Last Updated: May 2026
+                    </div>
+
+                    <a
+                       class="btn btn-gold w-100">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="pilot-shortage"  class="section-pad pilot-shortage-section">
+
+    <div class="container">
+
+        <div class="pilot-shortage-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+
+                    <div class="badge-gold mb-3">
+                        Industry Insight
+                    </div>
+
+                    <h2 class="section-title mb-4">
+                        Pilot Shortage in India:
+                        <span class="gradient-text">
+                            Opportunity or Challenge?
+                        </span>
+                    </h2>
+
+                    <p class="shortage-text">
+                        India's aviation sector is expanding rapidly with
+                        significant aircraft orders, increasing passenger
+                        traffic and new airline routes. Industry forecasts
+                        indicate strong long-term demand for commercial
+                        pilots, creating substantial career opportunities
+                        for aspiring aviators.
+                    </p>
+
+                    <p class="shortage-text">
+                        While demand continues to grow, aspiring pilots
+                        must still navigate medical requirements,
+                        DGCA examinations, flight training and airline
+                        recruitment processes successfully.
+                    </p>
+
+                    <a href="#" class="btn-gold mt-3">
+                        Read Full Analysis
+                    </a>
+
+                </div>
+
+                <div class="col-lg-5">
+
+                    <div class="shortage-stats">
+
+                        <div class="stat-item">
+                            <h3>10,900+</h3>
+                            <span>
+                                Additional Pilots Required
+                            </span>
+                        </div>
+
+                        <div class="stat-item">
+                            <h3>1,700+</h3>
+                            <span>
+                                Aircraft on Order
+                            </span>
+                        </div>
+
+                        <div class="stat-item">
+                            <h3>30,000</h3>
+                            <span>
+                                Estimated Future Demand
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
